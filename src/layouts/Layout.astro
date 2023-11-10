@@ -1,7 +1,12 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import { pink } from "../components/constants/colors.astro";
+import {
+  pink,
+  headerHeight,
+  gray,
+} from "../components/constants/constants.astro";
 
+import "@fontsource/satisfy";
 interface Props {
   title: string;
 }
@@ -33,10 +38,19 @@ const dark = pink[700];
 </html>
 <style
   is:global
-  define:vars={{ textPrimary, textSecondary, textTertiary, main, light, dark }}
+  define:vars={{
+    textPrimary,
+    textSecondary,
+    textTertiary,
+    main,
+    light,
+    dark,
+    headerHeight,
+  }}
 >
   h1 {
     color: var(--textColor);
+    font-family: "Satisfy", cursive;
   }
 
   body {
@@ -49,22 +63,8 @@ const dark = pink[700];
   html {
     font-family: system-ui, sans-serif;
     background: #fff;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-
-  h1 {
-    fontsize: 2rem;
-    fontweight: 500;
-    lineheight: 1.2;
+    & * {
+      box-sizing: border-box;
+    }
   }
 </style>

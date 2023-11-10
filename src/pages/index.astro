@@ -1,26 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card_copy.astro";
 import Navigation from "../components/Navigation.astro";
+
+import Gallery from "../components/sections/Gallery.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <h1>WagsSSSdfg to <span class="text-gradient">Astro</span></h1>
-    <img src="/fotka.jpg" alt="Astro Logo" />
-  </main>
+<Layout title="hipity Hopity budeme se brat">
+  <main><Gallery /></main>
 
   <style>
     main {
-      margin: auto;
-      padding: 1rem;
-      width: 800px;
-      max-width: calc(100% - 2rem);
-      color: white;
-      font-size: 20px;
-      line-height: 1.6;
     }
-
     h1 {
       font-size: 4rem;
       font-weight: 700;
