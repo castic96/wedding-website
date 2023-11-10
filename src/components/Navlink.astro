@@ -1,0 +1,44 @@
+---
+interface NavlinkProps {
+  section: string;
+  label: string;
+}
+
+const { section, label } = Astro.props;
+---
+
+<div class="wrapper">
+  <h4 class="text">{label}</h4>
+  <div class="line"></div>
+</div>
+
+<style>
+  .wrapper {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    &:hover {
+      .line {
+        opacity: 1;
+      }
+    }
+  }
+  .text {
+    font-weight: 600;
+    &:hover {
+      color: var(--main);
+    }
+  }
+
+  .line {
+    position: absolute;
+    bottom: 14px;
+    left: 0px;
+    right: 0px;
+    height: 2px;
+    background-color: var(--main);
+    opacity: 0;
+    transition: transform 0.13s ease-in-out;
+  }
+</style>

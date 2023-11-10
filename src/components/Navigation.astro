@@ -1,0 +1,48 @@
+---
+import Navlink from "./Navlink.astro";
+
+export const NAVBAR_HEIGHT = "72px";
+
+export const Sections = {
+  HOME: "home",
+  PROGRAM: "program",
+  MAPA: "mapa",
+  DOTAZNIK: "dotaznik",
+  KONTAKT: "kontakt",
+};
+---
+
+<nav>
+  <h1>Adel a Honza</h1>
+  <div class="links">
+    <Navlink sectionId={Sections.HOME} label="Úvod" />
+    <Navlink sectionId={Sections.PROGRAM} label="Program" />
+    <Navlink sectionId={Sections.MAPA} label="Mapa" />
+    <Navlink sectionId={Sections.DOTAZNIK} label="Dotazník" />
+    <Navlink sectionId={Sections.KONTAKT} label="Kontakt" />
+  </div>
+
+  <style define:vars={{ NAVBAR_HEIGHT }}>
+    .links {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px;
+      height: var(--NAVBAR_HEIGHT);
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      max-width: -webkit-fill-available;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      z-index: 100;
+    }
+  </style>
+</nav>
