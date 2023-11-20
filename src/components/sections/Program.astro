@@ -1,0 +1,51 @@
+---
+
+---
+
+<div class="program-wrapper">
+  <h1>Plán dne</h1>
+  <div class="connector"></div>
+  <section>
+    <h2>Ráno</h2>
+    <p>9:00 - 10:00: Sraz hostů u kostela/svatby</p>
+    <p>10:00 - 11:00: Obřad</p>
+  </section>
+  <div class="connector"></div>
+  <section>
+    <h2>Odpoledne</h2>
+    <p>12:00 - 13:30: Oběd v [název místa]</p>
+    <p>14:00 - 16:00: Fotografování a volný čas</p>
+  </section>
+  <div class="connector"></div>
+
+  <section>
+    <h2>Večer</h2>
+    <p>16:30 - 17:30: Přípitek a přivítání hostů na recepci</p>
+    <p>17:30 - 18:30: Slavnostní večeře</p>
+    <p>18:30 - 19:00: Krátké projevy a překvapení</p>
+    <p>19:00 - 22:00: Tanec a zábava</p>
+  </section>
+  <div class="connector"></div>
+</div>
+
+<style lang="less">
+  .connector {
+    background-color: var(--textTertiary);
+    width: 3px;
+    height: 50px;
+  }
+  .program-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    section {
+      padding: 10px;
+      width: 500px;
+      border: 10px solid var(--light);
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+</style>

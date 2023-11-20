@@ -3,24 +3,27 @@ import Layout from "../layouts/Layout.astro";
 import TitleImage from "../components/sections/TitleImage.astro";
 import Separator from "../components/Separator.astro";
 import Map from "../components/sections/Map.astro";
+import Intro from "../components/sections/Intro.astro";
+import Program from "../components/sections/Program.astro";
 ---
 
 <Layout title="hipity Hopity budeme se brat">
   <main>
     <TitleImage />
+    <Intro />
     <Separator />
     <Map />
+    <Separator />
+    <Program />
   </main>
 
   <style>
     main {
-    }
-    h1 {
-      font-size: 4rem;
-      font-weight: 700;
-      line-height: 1;
-      text-align: center;
-      margin-bottom: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      gap: 30px;
     }
 
     img {
