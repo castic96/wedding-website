@@ -1,31 +1,30 @@
 ---
-
+import Rocket from "../../components/icons/Rocket.astro";
 ---
 
 <div class="program-wrapper">
   <h1>Plán dne</h1>
-  <div class="connector"></div>
+
   <section>
     <h2>Ráno</h2>
-    <p>9:00 - 10:00: Sraz hostů u kostela/svatby</p>
-    <p>10:00 - 11:00: Obřad</p>
+    <p>10:00 - 11:00: Sraz hostů u na statku</p>
+    <p>11:00 - 12:00: Obřad</p>
   </section>
   <div class="connector"></div>
   <section>
     <h2>Odpoledne</h2>
-    <p>12:00 - 13:30: Oběd v [název místa]</p>
+    <p>12:00 - 13:30: Oběd</p>
     <p>14:00 - 16:00: Fotografování a volný čas</p>
   </section>
   <div class="connector"></div>
 
   <section>
     <h2>Večer</h2>
-    <p>16:30 - 17:30: Přípitek a přivítání hostů na recepci</p>
+    <p>16:30 - 17:30: Hry & Raut</p>
     <p>17:30 - 18:30: Slavnostní večeře</p>
     <p>18:30 - 19:00: Krátké projevy a překvapení</p>
     <p>19:00 - 22:00: Tanec a zábava</p>
   </section>
-  <div class="connector"></div>
 </div>
 
 <style lang="less">
@@ -47,5 +46,10 @@
         text-align: center;
       }
     }
+  }
+  .rocket {
+    width: 70px;
+    height: 70px;
+    color: var(--main);
   }
 </style>
