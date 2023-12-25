@@ -1,8 +1,6 @@
 ---
 import Navlink from "./Navlink.astro";
 
-export const NAVBAR_HEIGHT = "72px";
-
 export const Sections = {
   HOME: "home",
   PROGRAM: "program",
@@ -13,7 +11,7 @@ export const Sections = {
 ---
 
 <nav>
-  <h1>Adel a Honza</h1>
+  <h2>Adél <span class="accent">&</span> Honza</h2>
   <div class="links">
     <Navlink sectionId={Sections.HOME} label="Úvod" />
     <Navlink sectionId={Sections.PROGRAM} label="Program" />
@@ -22,12 +20,15 @@ export const Sections = {
     <Navlink sectionId={Sections.KONTAKT} label="Kontakt" />
   </div>
 
-  <style define:vars={{ NAVBAR_HEIGHT }}>
+  <style>
     .links {
       display: flex;
       gap: 20px;
     }
 
+    .accent {
+      color: var(--main);
+    }
     nav {
       background-color: #fff;
       display: flex;
@@ -35,13 +36,12 @@ export const Sections = {
       justify-content: space-between;
       gap: 20px;
       padding: 10px;
-      height: var(--NAVBAR_HEIGHT);
+      height: var(--headerHeight);
       position: fixed;
       top: 0px;
       width: 100%;
-      max-width: -webkit-fill-available;
-      border-bottom-left-radius: 16px;
-      border-bottom-right-radius: 16px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
       z-index: 100;
     }
   </style>

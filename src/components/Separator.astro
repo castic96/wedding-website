@@ -1,0 +1,31 @@
+---
+import Hearts from "../components/icons/Hearts.astro";
+---
+
+<div class="separator-wrapper">
+  <div class="separator-line"></div>
+  <Hearts class="hearts" />
+  <div class="separator-line"></div>
+</div>
+
+<style>
+  .separator-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .hearts {
+    width: 70px;
+    height: 70px;
+    color: var(--main);
+  }
+
+  .separator-line {
+    width: 30%;
+    height: 2px;
+    background-color: var(--textTertiary);
+  }
+</style>

@@ -18,27 +18,32 @@ const { section, label } = Astro.props;
     cursor: pointer;
     position: relative;
     align-items: center;
+
     &:hover {
       .line {
         opacity: 1;
+        left: 0;
+        right: 0;
+      }
+      .text {
+        color: var(--main);
       }
     }
   }
   .text {
     font-weight: 600;
-    &:hover {
-      color: var(--main);
-    }
   }
 
   .line {
     position: absolute;
     bottom: 14px;
-    left: 0px;
-    right: 0px;
+    left: 50%;
+    right: 50%;
     height: 2px;
     background-color: var(--main);
     opacity: 0;
-    transition: transform 0.13s ease-in-out;
+    border-radius: 3px;
+
+    transition: all 0.14s ease-in-out;
   }
 </style>

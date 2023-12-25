@@ -1,16 +1,21 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import { pink } from "../components/constants/colors.astro";
+import {
+  pink,
+  headerHeight,
+  gray,
+} from "../components/constants/constants.astro";
 
+import "@fontsource/satisfy";
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
 
-const textPrimary = "#00000DE";
-const textSecondary = "#0000099";
-const textTertiary = "#0000061";
+const textPrimary = "#111111";
+const textSecondary = "#777777";
+const textTertiary = "#aaaaaa";
 const main = pink[300];
 const light = pink[100];
 const dark = pink[700];
@@ -33,10 +38,27 @@ const dark = pink[700];
 </html>
 <style
   is:global
-  define:vars={{ textPrimary, textSecondary, textTertiary, main, light, dark }}
+  define:vars={{
+    textPrimary,
+    textSecondary,
+    textTertiary,
+    main,
+    light,
+    dark,
+    headerHeight,
+  }}
 >
   h1 {
-    color: var(--textColor);
+    text-align: center;
+    font-size: 3rem;
+    color: var(--textPrimary);
+    font-family: "Satisfy", cursive;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--textPrimary);
+    font-family: "Satisfy", cursive;
   }
 
   body {
@@ -45,26 +67,13 @@ const dark = pink[700];
     padding: 0;
     font-family: system-ui, sans-serif;
     background: #fff;
+    margin-bottom: 2rem;
   }
   html {
     font-family: system-ui, sans-serif;
     background: #fff;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-
-  h1 {
-    fontsize: 2rem;
-    fontweight: 500;
-    lineheight: 1.2;
+    & * {
+      box-sizing: border-box;
+    }
   }
 </style>
