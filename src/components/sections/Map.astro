@@ -1,8 +1,8 @@
 ---
-
+import { Sections } from "../Navigation.astro";
 ---
 
-<div class="map-wrapper">
+<div class="map-wrapper" id={Sections.MAPA}>
   <h1>Kde nás najdete</h1>
 
   <iframe
@@ -13,6 +13,9 @@
 </div>
 
 <style>
+  .map-wrapper {
+    scroll-margin-top: 50px;
+  }
   iframe {
     width: 100%;
     height: 100%;

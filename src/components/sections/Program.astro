@@ -1,8 +1,8 @@
 ---
-
+import { Sections } from "../Navigation.astro";
 ---
 
-<div class="program-wrapper">
+<div class="program-wrapper" id={Sections.PROGRAM}>
   <h1>Plán dne</h1>
 
   <section>
@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    scroll-margin-top: 50px;
     padding-left: 8%;
     padding-right: 8%;
     section {
