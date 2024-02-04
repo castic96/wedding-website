@@ -1,8 +1,8 @@
 ---
-
+import { Sections } from "../Navigation.astro";
 ---
 
-<div class="intro-wrapper">
+<div class="intro-wrapper" id={Sections.DOTAZNIK}>
   <div>
     <p>Milí hosté,</p>
     <p>
@@ -33,5 +33,6 @@
     line-height: 1.5em;
     padding-left: 8%;
     padding-right: 8%;
+    scroll-margin-top: 50px;
   }
 </style>

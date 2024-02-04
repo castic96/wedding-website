@@ -1,18 +1,24 @@
 ---
 interface NavlinkProps {
-  section: string;
+  sectionId: string;
   label: string;
 }
 
-const { section, label } = Astro.props;
+const { sectionId, label } = Astro.props;
 ---
 
 <div class="wrapper">
-  <h4 class="text">{label}</h4>
+  <a href={`#${sectionId}`}>
+    <h4 class="text">{label}</h4>
+  </a>
   <div class="line"></div>
 </div>
 
 <style>
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   .wrapper {
     display: flex;
     cursor: pointer;

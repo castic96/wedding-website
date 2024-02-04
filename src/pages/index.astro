@@ -6,9 +6,9 @@ import Map from "../components/sections/Map.astro";
 import Intro from "../components/sections/Intro.astro";
 import Program from "../components/sections/Program.astro";
 import Survey from "../components/sections/Survey.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
 
-svatba_adel_a_honza.jan-cibulka.cz
 <Layout title="Svatba Adél a Honza">
   <main>
     <TitleImage />
@@ -19,6 +19,8 @@ svatba_adel_a_honza.jan-cibulka.cz
     <Program />
     <Separator />
     <Survey />
+    <Separator />
+    <Contact />
   </main>
 
   <style>
@@ -28,6 +30,7 @@ svatba_adel_a_honza.jan-cibulka.cz
       align-items: stretch;
       justify-content: center;
       gap: 30px;
+      width: fit-content;
     }
 
     img {
